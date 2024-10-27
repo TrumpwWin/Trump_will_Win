@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trump wWin Memecoin</title>
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #0d0d2b;
+            color: #f0f0f0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+           
+            background-color: #1a1a40;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffd700;
+            cursor: pointer;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li a {
+            color:white;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        #hero {
+            height:60vh;
+            background: linear-gradient(to right, #1a1a40, #262675);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #ffd700;
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+
+        .hero-content button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #ffd700;
+            color: #1a1a40;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .hero-content button:hover {
+            background-color: #e6b800;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #about, #features, #roadmap {
+            background-color: #1a1a40;
+            margin-bottom: 20px;
+        }
+
+        #about h2, #features h2, #roadmap h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        footer {
+            background-color: #1a1a40;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .footer-content p {
+            margin: 0;
+        }
+
+        .social-links a {
+            color: #f0f0f0;
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #ffd700;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                background-color: #1a1a40;
+                position: absolute;
+                right: 0;
+                top: 60px;
+                width: 200px;
+                display: none;
+            }
+
+            header nav.active ul {
+                display: flex;
+            }
+
+            #hero h1 {
+                font-size: 2.5em;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo" onclick="toggleMenu()">Trump wWin</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#roadmap"></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    
+
+    <!-- Main Content -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Trump will Win Memecoin</h1>
+            <p>A fun and futuristic memecoin for the 2024 Election!</p>
+            <button onclick="scrollToSection('about')">Learn More</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="content">
+            <h2>About Trump wWin</h2>
+            <p>Trump wWin is a community-driven memecoin inspired by the excitement of the 2024 U.S. election. It’s a celebration of the political discourse, designed to engage, entertain, and unite supporters with a playful twist!</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="content">
+            <h2>Features</h2>
+            <ul>
+                <li>Community-driven and fun-focused.</li>
+                <li>Election-themed rewards and engagement.</li>
+                <li>Unique and collectible memecoin.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap">
+        <div class="content">
+            <h2>Roadmap</h2>
+            <p>If Trump Will Win The Election, We Will Launch Our Next Token Which Brand Name Is Trump Won!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Trump wWin Memecoin. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+                <a href="#" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Inline JavaScript -->
+    <script>
+        // Smooth Scroll Function
+        function scrollToSection(id) {
+            const section = document.getElementById(id);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.querySelector('header nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
